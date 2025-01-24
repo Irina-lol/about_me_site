@@ -33,18 +33,29 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Стили для секции "Портфолио" */
+.projects {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем проекты */
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 30%; /* Ширина для десктопов */
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
 @media (max-width: 768px) {
-    .projects {
-        flex-direction: column;
-    }
-
     .project {
-        width: 100%;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+        width: 100%; 
+        max-width: 400px; 
+        margin: 10px auto; 
     }
 }
 
