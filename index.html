@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой сайт</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +22,7 @@
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <h2>Немного о себе</h2>
         <p>Я начинающий фулстек-разработчик с уклоном во фронтенд, где чувствую себя 
             наиболее уверенно и комфортно. Мой основной стек технологий включает 
@@ -36,7 +39,7 @@
         </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
         <h2>Навыки:</h2>
         <p>Как начинающий фулстек-разработчик с уклоном во фронтенд, я активно 
             осваиваю ключевые технологии и инструменты, которые позволяют мне 
@@ -73,14 +76,44 @@
         </div>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" data-aos="fade-up">
         <h2>Портфолио</h2>
-        <p>Здесь будут примеры проектов.</p>
+        <p>Вот несколько моих проектов:</p>
+    
+        <div class="projects">
+            <div class="project">
+                <h3>Проект 1: Новостной портал</h3>
+                <p>Простой портал на Django с возможностью создания и редактирования постов.</p>
+                <a href="https://github.com/Irina-lol/DjangoNewsPortal.git" class="project-link">Посмотреть</a>
+            </div>
+            <div class="project">
+                <h3>Проект 2: Мессенджер</h3>
+                <p>Небольшое приложение с использованием JavaScript.</p>
+                <a href="https://github.com/Irina-lol/Messeger_E6.DZ.git" class="project-link">Посмотреть</a>
+            </div>
+            <div class="project">
+                <h3>Проект 3: Страница</h3>
+                <p>Последняя работа. Адаптивная страница с использованием HTML и CSS и немного JS.</p>
+                <a href="https://irina-lol.github.io/makeup-artist-site/" class="project-link">Посмотреть</a>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
         <h2>Контакты</h2>
-        <p>Здесь будут контактные данные.</p>
+        <p>Свяжись со мной удобным способом:</p>
+    
+        <div class="contact-buttons">
+            <a href="https://wa.me/+79964129534" class="contact-button whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://github.com/Irina-lol" class="contact-button github" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:irinakazynkina@gmail.com" class="contact-button email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </section>
 
     <footer>
