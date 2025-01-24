@@ -25,3 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.getElementById('burger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    burgerMenu.addEventListener('click', function() {
+        // Переключаем класс "active" для меню
+        navLinks.classList.toggle('active');
+
+        // Анимация бургер-меню
+        burgerMenu.classList.toggle('change');
+    });
+});

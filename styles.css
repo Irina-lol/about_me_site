@@ -18,6 +18,80 @@ header h1 {
     margin: 0;
 }
 
+/* Стили для бургер-меню */
+.burger-menu {
+    display: none; /* По умолчанию скрываем */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Анимация бургер-меню */
+.burger-menu.change .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.change .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Стили для мобильного меню */
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Показываем бургер-меню на мобильных устройствах */
+    }
+
+    .nav-links {
+        display: none; /* Скрываем основное меню на мобильных устройствах */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Показываем меню при активации */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -58,9 +132,23 @@ nav ul li a {
     }
 
     .project {
-        width: 80%; 
+        width: 90%; /* Увеличиваем ширину карточек на мобильных устройствах */
         max-width: 400px; 
         margin: 10px auto; 
+        padding: 10px; /* Уменьшаем отступы внутри карточки */
+    }
+
+    .project h3 {
+        font-size: 1.2rem; /* Уменьшаем размер заголовка */
+    }
+
+    .project p {
+        font-size: 0.9rem; /* Уменьшаем размер текста */
+    }
+
+    .project-link {
+        padding: 5px 10px; /* Уменьшаем отступы кнопки */
+        font-size: 0.9rem; /* Уменьшаем размер текста кнопки */
     }
 }
 
